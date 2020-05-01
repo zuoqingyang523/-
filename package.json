@@ -1,0 +1,53 @@
+{
+  "name": "electronic_web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode",
+    "build": "vue-cli-service build --mode",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bowser": "^2.3.0",
+    "brace-expansion": "^1.1.11",
+    "define-properties": "^1.1.3",
+    "element-ui": "^2.4.11",
+    "jquery": "^3.3.1",
+    "jquery-mobile": "^1.5.0-alpha.1",
+    "js-base64": "^2.4.9",
+    "lib-flexible": "^0.3.2",
+    "mint-ui": "^2.2.13",
+    "node-ipc": "^9.1.1",
+    "pdfjs-dist": "^2.0.943",
+    "pinch-zoom-js": "^2.3.4",
+    "string.prototype.padstart": "^3.0.0",
+    "swiper": "^4.4.5",
+    "unidragger": "^2.3.0",
+    "vue": "^2.5.17",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-axios": "^2.1.4",
+    "vue-easy-uploader": "^1.0.5",
+    "vue-moment": "^4.0.0",
+    "vue-pdf": "^4.0.6",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/eslint-config-prettier": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.9.0",
+    "postcss-px2rem": "^0.3.0",
+    "sass-loader": "^7.0.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

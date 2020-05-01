@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Xcontract电子签约平台</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <link rel="stylesheet" href="./finger.css">
+</head>
+
+<body>
+    <div data-role="page" id="hand-sign">
+        <div data-role="content" class="my-hand-sign-Context">
+            <div id="tools" class="my-hand-sign-bottom">
+                <div class="lines">
+                    <div class="my-hand-sign-line my-hand-sign-line-active" lineWidth="4">
+                        <img class="line-img nor-img" src="./image/fine_img_nor.png">
+                        <img class="line-img active-img" src="./image/fine_img_select.png" />
+                    </div>
+                    <div class="my-hand-sign-line" lineWidth="6">
+                        <img class="line-img nor-img" src="./image/medium_img_nor.png" />
+                        <img class="line-img active-img" src="./image/medium_img_select.png" />
+                    </div>
+                    <div class="my-hand-sign-line" lineWidth="10">
+                        <img class="line-img nor-img" src="./image/coarse_img_nor.png" />
+                        <img class="line-img active-img" src="./image/coarse_img_select.png" />
+                    </div>
+                </div>
+                <img class="
+                            clean" id="clean" src="./image/remove_btn_hov_pre.png" />
+                <img class="disable" id="disable" src="./image/save_btn_unclickable.png" />
+                <img class="submit" id="submit" src="./image/save_btn_nor.png" />
+                <div class="colors">
+                    <div class="my-hand-sign-check-div my-hand-sign-check-div-black" style="margin-bottom: 10px;">
+                        <div class="my-hand-sign-uncheck my-hand-sign-check" style="background-color: black" colorKey="3"></div>
+                    </div>
+                    <div class="my-hand-sign-check-div" style="margin-bottom: 10px;">
+                        <div class="my-hand-sign-uncheck" style="background-color: blue" colorKey="2"></div>
+                    </div>
+                    <div class="my-hand-sign-check-div">
+                        <div class="my-hand-sign-uncheck" style="background-color: red" colorKey="1"></div>
+                    </div>
+                </div>
+            </div>
+            <canvas class="myCanvas" id="myCanvas"></canvas>
+        </div>
+    </div>
+    <div id="successBox" style="display:none">
+        <img src="./image/Group.png" style="width:100px;height:100px;margin-top:30px;">
+        <p>新建签名成功</p>
+    </div>
+    <script src="./jquery-2.1.1.js"></script>
+    <script src="./jquery.mobile-1.4.5.min.js"></script>
+    <script src="./util.js"></script>
+    <script src="./canvasWrite.js"></script>
+    <script src="./init.js"></script>
+</body>
+<script type="text/javascript">
+</script>
+
+</html>

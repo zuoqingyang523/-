@@ -1,0 +1,190 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+#successBox {
+    text-align: center;
+}
+
+#hand-sign {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+}
+
+.my-hand-sign-Context {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    vertical-align: middle;
+}
+
+.my-hand-sign-bottom {
+    float: left;
+    margin-top: 3%;
+    width: 10%;
+    height: 94%;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 3px;
+}
+
+
+.myCanvas {
+    float: right;
+    width: 83%;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px dashed #9F9F9F;
+    background-size: cover;
+    background-position: center;
+}
+
+.signTitle {
+    float: right;
+    width: 10%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.clean {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    display: block;
+    left: 0;
+    top: 7%;
+}
+
+.disable {
+    width: 100%;
+    height: 20%;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 12%;
+}
+
+.submit {
+    width: 100%;
+    height: 20%;
+    display: none;
+    position: relative;
+    left: 0;
+    top: 12%;
+}
+
+.lines {
+    text-align: center;
+    vertical-align: center;
+    width: 32px;
+    margin-left: 1px;
+    position: relative;
+    left: 0;
+    top: 3%;
+}
+
+.my-hand-sign-line {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid white;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.my-hand-sign-line .nor-img {
+    display: block;
+}
+
+.my-hand-sign-line .active-img {
+    display: none;
+}
+
+.my-hand-sign-line-active .nor-img {
+    display: none;
+}
+
+.my-hand-sign-line .active-img {
+    display: block;
+}
+
+.line-img {
+    width: 30px;
+    height: 30px;
+}
+
+.colors {
+    text-align: center;
+    vertical-align: center;
+    width: 32px;
+    margin-left: 1px;
+    position: relative;
+    left: 0;
+    top: 20%;
+}
+
+.my-hand-sign-uncheck {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.my-hand-sign-check {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.my-hand-sign-check-div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.my-hand-sign-check-div-red {
+    background-color: #F6F6F6;
+    border: 1px solid red;
+}
+
+.my-hand-sign-check-div-blue {
+    background-color: #F6F6F6;
+    border: 1px solid blue;
+
+}
+
+.my-hand-sign-check-div-black {
+    background-color: #F6F6F6;
+    border: 1px solid black
+}
+
+.ui-loader-default {
+    display: none
+}
+
+.ui-mobile-viewport {
+    border: none;
+}
