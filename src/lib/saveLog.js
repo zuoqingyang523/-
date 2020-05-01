@@ -15,7 +15,6 @@ let handlerCommon = function (content, type) {
             console.warn(content);
         } else if (type == 'error') {
             console.error(content);
-            // data.stack = content.stack;
         } else {
             console.log(content);
         }
@@ -46,24 +45,6 @@ let errorLog = function (content, otherInfo) {
         data = Object.assign(data, otherInfo);
     }
     baseApi.createRpcToken(errorSubmitUrl, data, 'get');
-}
-
-window.onunload = async function (e) {
-    e.preventDefault();
-    if (warnAndInfoLog.length) {
-        $.ajax({
-            url: warnAndInfoLogUrl,
-            async: false,
-            type: "POST",
-            headers: {
-                'X-CSRF-Token': sessionStorage.token,
-            },
-            data: {
-                logArray: warnAndInfoLog
-            }
-        });
-    }
-    return null;
 }
 export default {
     install() {

@@ -4,7 +4,7 @@
       <!-- <div slot="submit" @click="save">保存</div> -->
     </nav-top>
     <div style="height:50px;"></div>
-    <div class="detail" v-if="detail">
+    <div class="detail" >
       <p class="pageDscp">基本信息</p>
       <ul class="moduleContent">
         <li class="item">
@@ -113,7 +113,9 @@ export default {
   components: {},
   data() {
     return {
-      detail: null,
+      detail: {
+        info:{}
+      },
       queryParams: null
     };
   },

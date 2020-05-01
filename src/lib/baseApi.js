@@ -19,20 +19,6 @@ axios.interceptors.response.use((suc) => {
             }
             return Promise.resolve(suc.data);
         } else {
-            if (suc.data.code === 102) {
-                goToHandler();
-            } else if (suc.data.code === 103) {
-                goToHandler();
-            } else {
-                if (localStorage.token) {
-                    handlerServiceErrResponse(suc.data, suc.config.isCommonHandler);
-                }
-            }
-            errorLog('', {
-                requestId: suc.config.requestId,
-                requestUrl: suc.config.url,
-                code: suc.data.code
-            })
             return Promise.reject(suc.data);
         }
     } else {
@@ -70,13 +56,10 @@ let handlerErrResponse = async function (error, status, isCommonHandler) {
         // 404  单独处理
         return;
     } else if (status === 403) {
-        sessionStorage.token = (await createRpcTokenFun('/getToken')).result;
-        window.location.href = '/m/login';
         return;
     }
     if (res) {
         if (isCommonHandler) {
-            console.log(res);
             if (res.message) {
                 showMessage(res.message, 2000);
             } else {
@@ -87,20 +70,8 @@ let handlerErrResponse = async function (error, status, isCommonHandler) {
         showMessage('抱歉暂时无法处理您的请求');
     }
 };
-let handlerServiceErrResponse = function (data, isCommonHandler) {
-    if (isCommonHandler) {
-        if (data.message) {
-            showMessage(data.message, 2000);
-        } else {
-            showMessage('抱歉暂时无法处理您的请求”');
-        }
-    }
-};
 let createRpcTokenFun = function (url, data, method, encode = true,
-    cache = false, isCommonHandler = true, responseType, isNotFormat, isVery = true) {
-    if (!sessionStorage.token && !isVery) {
-        this.getTocken
-    }
+    cache = false, isCommonHandler = true, responseType, isNotFormat) {
     data = data || {};
     method = method || RequestMethod.GET;
     cache = cache || false;
@@ -124,14 +95,13 @@ let createRpcTokenFun = function (url, data, method, encode = true,
         }
     }
     let headers;
-    // 传入设置Authorization请求头信息
     let uid = Util.getUID();
     headers = BaseApi.getHeaderValue(uid);
     if (cache === false) {
         headers['Cache-Control'] = 'no-cache';
         headers['Pragma'] = 'no-cache';
     }
-    url = '/m' + url;
+    url = url;
     return axios({
         url: url,
         method: method,
@@ -170,14 +140,8 @@ export default class BaseApi {
      * @return {Object} 访问令牌
      */
     static async createRpcToken(url, data, method, encode = false,
-        cache = false, isCommonHandler = true, responseType, isNotFormat, isVery = true) {
-        if (!sessionStorage.token) {
-            sessionStorage.token = (await createRpcTokenFun('/getToken')).result;
-            return createRpcTokenFun(url, data, method, encode, cache, isCommonHandler, responseType, isNotFormat, isVery)
-        } else {
-            return createRpcTokenFun(url, data, method, encode, cache, isCommonHandler, responseType, isNotFormat, isVery)
-        }
-
+        cache = false, isCommonHandler = true, responseType, isNotFormat) {
+        return createRpcTokenFun(url, data, method, encode, cache, isCommonHandler, responseType, isNotFormat)
     }
     /**
      * 获取请求头信息 ,子类重写此方法可改变请求头信息
@@ -189,7 +153,6 @@ export default class BaseApi {
             'token': localStorage.token,
         } : {};
         headers = Object.assign(headers, {
-            'X-CSRF-Token': sessionStorage.token,
             'request-id': uid
         })
         return headers;
