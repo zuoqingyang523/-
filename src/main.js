@@ -8,6 +8,7 @@ import GlobalConfig from "./lib/config";
 import "./assets/common/common.css";
 import 'mint-ui/lib/style.css';
 import '@lib/extend.js'
+import * as dd from 'dingtalk-jsapi';
 import {
   Base64
 } from 'js-base64';
@@ -26,6 +27,7 @@ Vue.use(toastRegistry)
 Vue.prototype.$Ajax = axios;
 Vue.prototype.$Base64 = Base64;
 Vue.prototype.$Moment = moment;
+Vue.prototype.$dd = dd;
 
 new Vue({
   router,
