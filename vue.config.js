@@ -3,10 +3,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ProTable = require('./proTable')
 module.exports = {
   outputDir: "./../service/public/assets", //修改 构建包的名字及路径，默认名字是dist
-  assetsDir: './m',
+  assetsDir: './write',
   devServer: {
-    port: 4200,
+    host:"127.0.0.1",
+    port: 8080,
     open: true,
+    disableHostCheck: true,
     proxy: ProTable.dev,
   },
   configureWebpack: config => {

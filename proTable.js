@@ -4,7 +4,7 @@ let devMidWare = {
     changeOrigin: true,
 }
 module.exports = {
-    port: 3200,
+    port: 8080,
     // 帅勋
     dev: {
         '/m/file/': devMidWare,

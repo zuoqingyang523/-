@@ -7,6 +7,7 @@ const SignList = r => require.ensure([], () => r(require('./components/sign/Sign
 const detail = r => require.ensure([], () => r(require('./components/sign/detail.vue')), 'SignList')
 let router = new Router({
   mode: "history",
+  base:'/write',
   routes: [
     {
       path: '/',
