@@ -17,6 +17,9 @@ import 'lib-flexible/flexible.js';
 // 按需引入
 import Mint from 'mint-ui';
 Vue.use(Mint);
+import Vant from 'vant'
+import 'vant/lib/index.css'
+Vue.use(Vant)
 import toastRegistry from './components/common/index'
 import errorHandler from '@lib/errorHandler.js';
 import saveLog from "@lib/saveLog.js"
