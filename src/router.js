@@ -6,6 +6,7 @@ const ApprovalRegister = r => require.ensure([], () => r(require('./components/r
 const SignList = r => require.ensure([], () => r(require('./components/sign/SignList.vue')), 'SignList')
 const detail = r => require.ensure([], () => r(require('./components/sign/detail.vue')), 'SignList')
 const Approval = r => require.ensure([], () => r(require('./components/ding/Approval.vue')), 'Approval')
+const ApprovalDetails = r => require.ensure([], () => r(require('./components/ding/ApprovalDetails.vue')), 'Approval')
 let router = new Router({
   mode: "history",
   base:'/write',
@@ -18,6 +19,11 @@ let router = new Router({
       path: '/Approval',
       name: '报销',
       component: Approval,
+    },
+    {
+      path: '/ApprovalDetails',
+      name: '报销详情',
+      component: ApprovalDetails,
     },
     {
       path: '/canvasSign',

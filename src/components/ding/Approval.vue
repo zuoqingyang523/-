@@ -84,7 +84,7 @@
                 time: ''
             }
         },
-        components: {
+        component: {
             Header,
             Field,
             Picker,
@@ -257,6 +257,9 @@
     }
     .submit{
         margin-top: 10px;
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 5px;
     }
 }
 
