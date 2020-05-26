@@ -19,4 +19,4 @@ npm run build
 ```
 npm run lint
 ```
-dingtalk-jsapi
+### fix dingding from wk
