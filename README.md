@@ -20,3 +20,4 @@ npm run build
 npm run lint
 ```
 dingtalk-jsapi 练习嘛试试
+### fix dingding from wk
