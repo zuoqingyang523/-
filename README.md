@@ -19,4 +19,4 @@ npm run build
 ```
 npm run lint
 ```
-dingtalk-jsapi
+dingtalk-jsapi 练习嘛试试
